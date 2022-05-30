@@ -1,7 +1,7 @@
-function Word() {
-
+function Word({word}){
+  
     return(
-       <p className="word"> A _ _ _ _ </p>
+       <p className="word"> {word.split("").fill("_").join(" ")} </p>
     )
 }
 
