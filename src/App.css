@@ -1,31 +1,85 @@
-.App {
-  text-align: center;
-  background-color: rgb(227, 241, 241);
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(243, 233, 213);
+  font-family: "Shadows Into Light", cursive;
 }
 
-.alphabet > div{
+.App {
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin: 30px 0px;
+}
+
+.alphabet > div {
   display: inline;
 }
 
-.main{
+.main {
   display: flex;
   justify-content: space-around;
 }
 
 .word {
   font-size: 30px;
+  font-weight: bold;
+  color: rgb(85, 61, 34);
 }
 
-.alphabet{
-  margin: 5% 20%;
- 
+.alphabet {
+  margin: 2% 20%;
 }
 
-.alphabet > button{
- width: 50px;
- height: 40px;
- margin: 5px;
- border-radius: 8px;
+.alphabet > button {
+  width: 55px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 25px;
+  border: 3px solid rgba(128, 83, 47, 0.678);
+  font-family: "Shadows Into Light", cursive;
+  color: rgb(85, 61, 34);
+  font-weight: bold;
+}
+.wrong-guesses {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.wrong-letters{
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
 
+button:disabled{
+  background-color: rgba(184, 181, 164, 0.849);
+}
 
+.game-over{
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+}
+
+h2{margin-bottom: 0px;}
+
+.reset{
+  width: 110px;
+  height: 55px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 25px;
+  border: 3px solid rgba(128, 83, 47, 0.678);
+  font-family: "Shadows Into Light", cursive;
+  color: rgb(85, 61, 34);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
