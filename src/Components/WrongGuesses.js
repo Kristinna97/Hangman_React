@@ -1,7 +1,18 @@
-function WrongGuesses() {
+function WrongGuesses({wrongLetters}) {
 
     return(
-        <p className="wrong-guesses"> Wrong guesses: 1/6</p>
+        <>
+        <div>
+        <p className="wrong-guesses"> Wrong guesses:   {wrongLetters.length}/6</p>
+        <div className="wrong-letters">
+        {wrongLetters.map((letter) => {
+          return (
+            <span key={letter}>{letter}</span>
+          );
+        })}
+      </div>
+      </div>
+        </>
     )
 }
 

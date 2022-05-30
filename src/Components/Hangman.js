@@ -1,5 +1,5 @@
 import WrongGuesses from './WrongGuesses';
-function Hangman() {
+function Hangman({wrongLetters}) {
 
 
 
@@ -7,8 +7,8 @@ function Hangman() {
    return (
        <>
        <div className='main'>
-        <p className="hangman"><img src={require("../images/0.png")}></img></p>
-        <WrongGuesses/>
+        <p className="hangman"><img src={require(`../images/${wrongLetters.length}.png`)}></img></p>
+        <WrongGuesses wrongLetters={wrongLetters}/>
         </div>
         </>
       )
