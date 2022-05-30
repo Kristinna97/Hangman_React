@@ -1,7 +1,7 @@
 function Word() {
 
     return(
-        '_ _ _ _ _'
+       <p className="word"> A _ _ _ _ </p>
     )
 }
 
