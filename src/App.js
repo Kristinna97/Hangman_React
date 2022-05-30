@@ -29,7 +29,7 @@ function App() {
     <div className="App">
     <Header/>
     <Hangman wrongLetters={wrongLetters} playable={playable} playAgain={playAgain} />
-    <WordAndAlphabet word={selectedWord} wrongLetters={wrongLetters} setWrongLetters={setWrongLetters} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters} setPlayable={setPlayable}/>
+    <WordAndAlphabet word={selectedWord} wrongLetters={wrongLetters} setWrongLetters={setWrongLetters} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters} setPlayable={setPlayable} playable={playable}/>
     </div>
   );
 }

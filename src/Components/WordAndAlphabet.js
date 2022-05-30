@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 
 const letters = [
   "A",
@@ -36,10 +36,12 @@ function WordAndAlphabet({
   setWrongLetters,
   wrongLetters,
   setPlayable,
+  playable
 }) {
   const wordLetters = [...word.toUpperCase()];
 
   function checkLetter(event, clickedLetter) {
+    if(playable){
     event.target.disabled = true;
     if (wordLetters.includes(clickedLetter.letter)) {
       setCorrectLetters([clickedLetter.letter, ...correctLetters]);
@@ -50,6 +52,7 @@ function WordAndAlphabet({
       }
     }
   }
+}
   const displayWord = wordLetters
     .map((letter) => (correctLetters.includes(letter) ? letter : "_"))
     .join(" ");
