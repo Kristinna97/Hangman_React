@@ -1,7 +1,7 @@
 function WrongGuesses() {
 
     return(
-        <p> Wrong guesses: 1/6</p>
+        <p className="wrong-guesses"> Wrong guesses: 1/6</p>
     )
 }
 

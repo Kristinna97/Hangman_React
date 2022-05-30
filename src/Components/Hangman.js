@@ -1,10 +1,16 @@
+import WrongGuesses from './WrongGuesses';
 function Hangman() {
 
 
 
     
    return (
-        <p>hangman here</p>
+       <>
+       <div className='main'>
+        <p className="hangman">hangman here</p>
+        <WrongGuesses/>
+        </div>
+        </>
       )
 }
 

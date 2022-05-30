@@ -30,7 +30,7 @@ function Alphabet() {
   return (
     <div className="alphabet">
       {letters.map((letter) => {
-        return <button>{letter}</button>;
+        return <button key={letter}>{letter}</button>;
       })}
     </div>
   );
