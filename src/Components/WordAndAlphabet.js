@@ -1,4 +1,4 @@
-import { click } from "@testing-library/user-event/dist/click";
+import { useState } from "react";
 
 const letters = [
   "A",
@@ -29,29 +29,39 @@ const letters = [
   "Z",
 ];
 
-function WordAndAlphabet({ word, correctLetters, setCorrectLetters  , setWrongLetters ,wrongLetters}) {
+function WordAndAlphabet({
+  word,
+  correctLetters,
+  setCorrectLetters,
+  setWrongLetters,
+  wrongLetters,
+}) {
   const wordLetters = [...word.toUpperCase()];
 
-
-  function checkLetter(clickedLetter) {
+  function checkLetter(event, clickedLetter) {
+    event.target.disabled = true;
     if (wordLetters.includes(clickedLetter.letter)) {
       setCorrectLetters([clickedLetter.letter, ...correctLetters]);
-    }else{
-      setWrongLetters([clickedLetter.letter,...wrongLetters])
+    } else {
+      setWrongLetters([clickedLetter.letter, ...wrongLetters]);
     }
-   
   }
 
   const displayWord = wordLetters
     .map((letter) => (correctLetters.includes(letter) ? letter : "_"))
     .join(" ");
+
   return (
     <>
       <p className="word"> {displayWord} </p>
       <div className="alphabet">
         {letters.map((letter) => {
           return (
-            <button key={letter} onClick={() => checkLetter({ letter })}>
+            <button
+              disabled={false}
+              key={letter}
+              onClick={(event) => checkLetter(event, { letter })}
+            >
               {letter}
             </button>
           );
