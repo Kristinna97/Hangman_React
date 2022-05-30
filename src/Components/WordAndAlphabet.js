@@ -35,6 +35,7 @@ function WordAndAlphabet({
   setCorrectLetters,
   setWrongLetters,
   wrongLetters,
+  setPlayable,
 }) {
   const wordLetters = [...word.toUpperCase()];
 
@@ -43,10 +44,12 @@ function WordAndAlphabet({
     if (wordLetters.includes(clickedLetter.letter)) {
       setCorrectLetters([clickedLetter.letter, ...correctLetters]);
     } else {
-      setWrongLetters([clickedLetter.letter, ...wrongLetters]);
+      setWrongLetters([...wrongLetters, clickedLetter.letter]);
+      if (wrongLetters.length === 5) {
+        setPlayable(false);
+      }
     }
   }
-
   const displayWord = wordLetters
     .map((letter) => (correctLetters.includes(letter) ? letter : "_"))
     .join(" ");
