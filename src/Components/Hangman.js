@@ -7,7 +7,7 @@ function Hangman({wrongLetters, playable, playAgain ,won, word }) {
    return (
        <>
        <div className='main'>
-        <p className="hangman"><img alt="step-image" src={require(`../images/${wrongLetters.length}.png`)}></img></p>
+        <p className="hangman"><img alt="step-representation" src={require(`../images/${wrongLetters.length}.png`)}></img></p>
         <GameOutcome wrongLetters={wrongLetters} playable={playable}  playAgain={playAgain} won={won} word={word}/>
         </div>
         </>
