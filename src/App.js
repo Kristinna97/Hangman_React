@@ -6,7 +6,6 @@ import { words } from "./wordBank";
 import "./App.css";
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
-console.log(selectedWord)
 
 function App() {
   const [correctLetters, setCorrectLetters] = useState([]);
@@ -18,11 +17,11 @@ function App() {
     setPlayable(true);
     setCorrectLetters([]);
     setWrongLetters([]);
+    selectedWord = words[Math.floor(Math.random() * words.length)];
+    setWon(false);
     const buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
-      button.disabled = false;
-      setWon(false);
-      selectedWord = words[Math.floor(Math.random() * words.length)];
+      button.disabled = false; 
     });
   }
 
@@ -34,6 +33,7 @@ function App() {
         playable={playable}
         playAgain={playAgain}
         won={won}
+        word = {selectedWord}
       />
       <WordAndAlphabet
         word={selectedWord}
@@ -44,6 +44,7 @@ function App() {
         setPlayable={setPlayable}
         playable={playable}
         setWon={setWon}
+        
       />
     </div>
   );

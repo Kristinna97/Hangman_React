@@ -1,8 +1,9 @@
-function WrongGuesses({ wrongLetters, playable, playAgain , won}) {
+function WrongGuesses({ wrongLetters, playable, playAgain , won, word}) {
   if (!playable && won === false) {      
     return (
       <div className="game-over">
         <h2>Game Over</h2>
+        <p className="word-reveal">Correct word was : {word}</p>
         <button className="reset" onClick={() => playAgain()}>
           Reset
         </button>

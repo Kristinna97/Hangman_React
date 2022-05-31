@@ -63,7 +63,7 @@ function WordAndAlphabet({
       }
     }
   }
-  const displayWord = wordLetters
+  let displayWord = wordLetters
     .map((letter) => (correctLetters.includes(letter) ? letter : "_"))
     .join(" ");
 

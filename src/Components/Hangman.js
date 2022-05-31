@@ -1,5 +1,5 @@
 import WrongGuesses from './WrongGuesses';
-function Hangman({wrongLetters, playable, playAgain ,won }) {
+function Hangman({wrongLetters, playable, playAgain ,won, word }) {
 
 
 
@@ -8,9 +8,8 @@ function Hangman({wrongLetters, playable, playAgain ,won }) {
        <>
        <div className='main'>
         <p className="hangman"><img src={require(`../images/${wrongLetters.length}.png`)}></img></p>
-        <WrongGuesses wrongLetters={wrongLetters} playable={playable}  playAgain={playAgain} won={won}/>
+        <WrongGuesses wrongLetters={wrongLetters} playable={playable}  playAgain={playAgain} won={won} word={word}/>
         </div>
-        {/* <p className='description'>Guess the {category} </p> */}
         </>
       )
 }
