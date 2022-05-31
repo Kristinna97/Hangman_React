@@ -1,4 +1,4 @@
-function WrongGuesses({ wrongLetters, playable, playAgain , won, word}) {
+function GameOutcome({ wrongLetters, playable, playAgain , won, word}) {
   if (!playable && won === false) {      
     return (
       <div className="game-over">
@@ -38,4 +38,4 @@ function WrongGuesses({ wrongLetters, playable, playAgain , won, word}) {
   }
 }
 
-export default WrongGuesses;
+export default GameOutcome;

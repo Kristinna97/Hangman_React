@@ -1,4 +1,4 @@
-import WrongGuesses from './WrongGuesses';
+import GameOutcome from './GameOutcome';
 function Hangman({wrongLetters, playable, playAgain ,won, word }) {
 
 
@@ -8,7 +8,7 @@ function Hangman({wrongLetters, playable, playAgain ,won, word }) {
        <>
        <div className='main'>
         <p className="hangman"><img src={require(`../images/${wrongLetters.length}.png`)}></img></p>
-        <WrongGuesses wrongLetters={wrongLetters} playable={playable}  playAgain={playAgain} won={won} word={word}/>
+        <GameOutcome wrongLetters={wrongLetters} playable={playable}  playAgain={playAgain} won={won} word={word}/>
         </div>
         </>
       )
