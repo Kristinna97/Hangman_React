@@ -173,6 +173,9 @@ h2 {
   .you-won {
     font-size: 14px;
   }
+  .wrong-guesses{
+    font-size: 16px;
+  }
   .word-reveal {
     font-size: 14px;
   }
