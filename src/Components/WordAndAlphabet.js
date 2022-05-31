@@ -51,11 +51,11 @@ function WordAndAlphabet({
         setWrongLetters([...wrongLetters, clickedLetter.letter]);
         if (wrongLetters.length === 5) {
           setPlayable(false);
+          lettersGuessed = [];
         }
       }
       const wordArr = word.toUpperCase().split("");
       const uniqueWord = new Set(wordArr);
-
       if (lettersGuessed.length === uniqueWord.size) {
         setWon(true);
         setPlayable(false);
@@ -83,7 +83,6 @@ function WordAndAlphabet({
           );
         })}
       </div>
-      
     </>
   );
 }
