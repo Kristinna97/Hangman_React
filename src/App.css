@@ -29,6 +29,7 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   color: rgb(85, 61, 34);
+  margin-top : 10px;
 }
 
 .alphabet {
@@ -83,4 +84,10 @@ h2{margin-bottom: 0px;}
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.description{
+  margin: 0px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
