@@ -151,6 +151,10 @@ h2 {
   .alphabet {
     margin: 20% 10%;
   }
+  .word {
+    font-size: 25px;
+  
+  }
 }
 
 @media (max-width: 450px) {
@@ -181,5 +185,74 @@ h2 {
   }
   .alphabet {
     margin: 25% 10%;
+  }
+}
+@media (max-width: 350px) {
+  h1{
+    font-size: 20px;
+  }
+  img {
+    width: 80%;
+  }
+  .alphabet > button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .game-over,
+  .you-won {
+    font-size: 12px;
+  }
+  .word-reveal {
+    font-size: 10px;
+  }
+  .reset {
+    width: 60px;
+    height: 30px;
+    margin: 6px;
+
+    font-size: 12px;
+  }
+  .alphabet {
+    margin: 25% 10%;
+  }
+  .word {
+    font-size: 20px;
+  
+  }
+}
+
+@media (max-width: 350px) {
+  h1{
+    font-size: 16px;
+  }
+  img {
+    width: 80%;
+  }
+  .alphabet > button {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+  .game-over,
+  .you-won {
+    font-size: 10px;
+  }
+  .word-reveal {
+    font-size: 10px;
+  }
+  .reset {
+    width: 50px;
+    height: 30px;
+    margin: 6px;
+
+    font-size: 10px;
+  }
+  .alphabet {
+    margin: 25% 10%;
+  }
+  .word {
+    font-size: 16px;
+  
   }
 }
