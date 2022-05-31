@@ -29,7 +29,7 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   color: rgb(85, 61, 34);
-  margin-top : 10px;
+  margin-top: 30px;
 }
 
 .alphabet {
@@ -52,27 +52,31 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
 }
-.wrong-letters{
+.wrong-letters {
   font-size: 22px;
   letter-spacing: 4px;
   font-weight: bold;
 }
 
-button:disabled{
+button:disabled {
   background-color: rgba(184, 181, 164, 0.849);
 }
 
 .game-over,
-.you-won{
+.you-won {
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 4px;
-
+}
+.word-reveal {
+  font-size: 24px;
 }
 
-h2{margin-bottom: 0px;}
+h2 {
+  margin-bottom: 0px;
+}
 
-.reset{
+.reset {
   width: 110px;
   height: 55px;
   margin: 5px;
@@ -86,8 +90,96 @@ h2{margin-bottom: 0px;}
   letter-spacing: 2px;
 }
 
-.description{
-  margin: 0px;
-  font-weight: bold;
-  letter-spacing: 3px;
+
+@media (max-width: 700px) {
+  img {
+    width: 80%;
+  }
+  .wrong-guesses {
+    font-size: 20px;
+  }
+  .alphabet > button {
+    width: 45px;
+    height: 45px;
+  }
+  .game-over,
+  .you-won {
+    font-size: 18px;
+  }
+  .word-reveal {
+    font-size: 18px;
+  }
+
+  .alphabet {
+    margin-top: 10%;
+  }
+  .word {
+    margin-top: 40px;
+  }
+  .reset {
+    width: 90px;
+    height: 40px;
+    margin: 6px;
+
+    font-size: 22px;
+  }
+}
+
+
+@media (max-width: 550px) {
+  img {
+    width: 75%;
+  }
+  .alphabet > button {
+    width: 40px;
+    height: 40px;
+  }
+  .game-over,
+  .you-won {
+    font-size: 16px;
+  }
+  .word-reveal {
+    font-size: 16px;
+  }
+  .reset {
+    width: 80px;
+    height: 40px;
+    margin: 6px;
+
+    font-size: 18px;
+  }
+  .alphabet {
+    margin: 20% 10%;
+  }
+}
+
+@media (max-width: 450px) {
+  h1{
+    font-size: 24px;
+  }
+  img {
+    width: 80%;
+  }
+  .alphabet > button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  .game-over,
+  .you-won {
+    font-size: 14px;
+  }
+  .word-reveal {
+    font-size: 14px;
+  }
+  .reset {
+    width: 70px;
+    height: 40px;
+    margin: 6px;
+
+    font-size: 16px;
+  }
+  .alphabet {
+    margin: 25% 10%;
+  }
 }
