@@ -61,7 +61,8 @@ button:disabled{
   background-color: rgba(184, 181, 164, 0.849);
 }
 
-.game-over{
+.game-over,
+.you-won{
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 4px;

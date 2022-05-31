@@ -1,4 +1,4 @@
-
+import Congratulations from "./Congratulations";
 
 const letters = [
   "A",
@@ -28,7 +28,7 @@ const letters = [
   "Y",
   "Z",
 ];
-
+let lettersGuessed = [];
 function WordAndAlphabet({
   word,
   correctLetters,
@@ -36,23 +36,33 @@ function WordAndAlphabet({
   setWrongLetters,
   wrongLetters,
   setPlayable,
-  playable
+  playable,
+  setWon,
 }) {
   const wordLetters = [...word.toUpperCase()];
 
   function checkLetter(event, clickedLetter) {
-    if(playable){
-    event.target.disabled = true;
-    if (wordLetters.includes(clickedLetter.letter)) {
-      setCorrectLetters([clickedLetter.letter, ...correctLetters]);
-    } else {
-      setWrongLetters([...wrongLetters, clickedLetter.letter]);
-      if (wrongLetters.length === 5) {
+    if (playable) {
+      event.target.disabled = true;
+      if (wordLetters.includes(clickedLetter.letter)) {
+        lettersGuessed.push(clickedLetter.letter);
+        setCorrectLetters([clickedLetter.letter, ...correctLetters]);
+      } else {
+        setWrongLetters([...wrongLetters, clickedLetter.letter]);
+        if (wrongLetters.length === 5) {
+          setPlayable(false);
+        }
+      }
+      const wordArr = word.toUpperCase().split("");
+      const uniqueWord = new Set(wordArr);
+
+      if (lettersGuessed.length === uniqueWord.size) {
+        setWon(true);
         setPlayable(false);
+        lettersGuessed = [];
       }
     }
   }
-}
   const displayWord = wordLetters
     .map((letter) => (correctLetters.includes(letter) ? letter : "_"))
     .join(" ");
