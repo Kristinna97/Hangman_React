@@ -4,7 +4,7 @@
 [You can see live verion of the app on the following link](https://hangman-react-c42b4b.netlify.app/)
 <br>
 
-This is a classic Hanglan game. I build this app as a React exercise using React useState Hook. React keeps track of the current word, the letters selected(wrong or correct) and if the game has been won or lost.
+This is a classic Hangman game. I build this app as a React exercise using React useState Hook. React keeps track of the current word, the letters selected(wrong or correct) and if the game has been won or lost.
 <br>
  Everytime you start the game it will get a random word froma  predefined list and you should try guess it. <br>
  -If you select a wrong letter the wrong letters counter will increse and display the letter you have clicked. It will also update the hangman image depending on the number of wrong guesses.
